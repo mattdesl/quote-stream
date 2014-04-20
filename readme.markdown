@@ -2,6 +2,10 @@
 
 transform a stream into a quoted string
 
+[![testling badge](https://ci.testling.com/substack/quote-stream.png)](https://ci.testling.com/substack/quote-stream)
+
+[![build status](https://secure.travis-ci.org/substack/quote-stream.png)](http://travis-ci.org/substack/quote-stream)
+
 # example
 
 ``` js
