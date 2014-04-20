@@ -10,6 +10,11 @@ var buffers = {
     escapeT: Buffer('\\t')
 };
 
+for (var i = 0; i < 32; i++) {
+    var s = i.toString(16);
+    buffers[i] = Buffer('\\u' + Array(5-s.length).join('0') + s);
+}
+
 var codes = {
     quote: '"'.charCodeAt(0),
     escape: '\\'.charCodeAt(0),
@@ -37,9 +42,15 @@ module.exports = function () {
     function write (buf, enc, next) {
         var offset = 0;
         for (var i = 0; i < buf.length; i++) {
-            var m = map[buf[i]];
+            var c = buf[i];
+            var m = map[c];
             if (m) {
                 var bufs = [ buf.slice(offset, i), m ];
+                this.push(Buffer.concat(bufs));
+                offset = i + 1;
+            }
+            else if (c < 32) {
+                var bufs = [ buf.slice(offset, i), buffers[c] ];
                 this.push(Buffer.concat(bufs));
                 offset = i + 1;
             }
