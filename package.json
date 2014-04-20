@@ -1,0 +1,32 @@
+{
+  "name": "quote-stream",
+  "version": "0.0.0",
+  "description": "transform a stream into a quoted string",
+  "main": "index.js",
+  "dependencies": {
+    "through2": "~0.4.1"
+  },
+  "devDependencies": {
+    "tape": "~2.12.1",
+    "concat-stream": "~1.4.5"
+  },
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/substack/quote-stream.git"
+  },
+  "homepage": "https://github.com/substack/quote-stream",
+  "keywords": [
+    "quote",
+    "transform",
+    "stream"
+  ],
+  "author": {
+    "name": "James Halliday",
+    "email": "mail@substack.net",
+    "url": "http://substack.net"
+  },
+  "license": "MIT"
+}
