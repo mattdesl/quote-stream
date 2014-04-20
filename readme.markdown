@@ -27,6 +27,15 @@ var quote = require('quote-stream')
 Return a transform stream `q` that wraps input in double quotes and adds escape
 characters to the chunks.
 
+# usage
+
+```
+usage: quote-stream
+
+  Transform stdin to a quoted string on stdout.
+
+```
+
 # install
 
 With [npm](https://npmjs.org) do:

@@ -4,11 +4,12 @@
   "description": "transform a stream into a quoted string",
   "main": "index.js",
   "dependencies": {
-    "through2": "~0.4.1"
+    "through2": "~0.4.1",
+    "minimist": "0.0.8"
   },
   "devDependencies": {
-    "tape": "~2.12.1",
-    "concat-stream": "~1.4.5"
+    "concat-stream": "~1.4.5",
+    "tape": "~2.12.1"
   },
   "scripts": {
     "test": "tape test/*.js"
