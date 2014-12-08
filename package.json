@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "description": "transform a stream into a quoted string",
   "main": "index.js",
+  "bin": {
+    "quote-stream": "bin/cmd.js"
+  },
   "dependencies": {
     "through2": "~0.4.1",
     "minimist": "0.0.8"
